@@ -12,10 +12,10 @@ This is the hardware (PCB) and the software (ESPHome configuration) for a Home A
 3. Assemble all parts on the PCB.
 4. [Install ESPHome](https://esphome.io/guides/getting_started_command_line.html#getting-started-with-esphome).
 5. Create the secrets file from the template.
-6. Connect the ESP01 to the programming adapter.
+6. Connect the ESP-01 to the programming adapter.
 7. Run `esphome lights.yaml compile` to compile the firmware.
 8. Run `esphome lights.yaml upload` to upload the newly-compiled firmware.
-9. Place the ESP01 in the PCB, paying attention to the direction of where it points
+9. Place the ESP-01 in the PCB, paying attention to the direction of where it points
 
 ## Parts List
 
@@ -34,14 +34,15 @@ This is the hardware (PCB) and the software (ESPHome configuration) for a Home A
 -   1x 2-pin 3.5mm screw terminal blocks (**J2**)
 -   1x 10-pin 2.54mm (0.1 in) screw terminal blocks (**PIRS**)
 -   1x SPDT on/off switch (**S1**)
--   _optional_: 1x LED (**D1**) and 1x 330 ohm resistor (**R2**)
 -   1x 10K ohm resistor (**R1**)
+-   _optional_: 1x LED (**D1**) and 1x 330 ohm resistor (**R2**)
+-   1x 5K ohm resistor (I used a 5.2K ohm resistor I had lying around) soldered between CH_EN and VCC on the ESP-01
 -   1x safe casing that prevents access to 120VAC power
 -   1x server running Home Assistant for automating the lights in reaction to the motion sensors
 
 ## Notes
 
--   The ESP01 needs a 5K ohm resistor (I used a 5.2K ohm resistor I had lying around) soldered between CH_EN and VCC to operate. This will be fixed in a later board revision.
+-   The ESP-01 needs a 5K ohm resistor (I used a 5.2K ohm resistor I had lying around) soldered between CH_EN and VCC on the ESP-01 to operate. This will be fixed in a later board revision.
 -   If ESPHome is not working properly (either not installing or not compiling), you can upload the binary in the Release using another uploading tool, such as `esptool`.
 -   I tested this with ESPHome v1.15.3.
 
