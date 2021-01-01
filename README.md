@@ -6,7 +6,7 @@ This is the hardware (PCB) and the software (ESPHome configuration) for a Home A
 
 ## Instructions
 
-1. Download the board files from GitHub releases.
+1. Download the board files from GitHub releases (_Coming Soon!_, for now, use EAGLE to export them).
 2. Order the needed parts ([parts list below](#parts-list)).
     1. I used [JLCPCB](jlcpcb.com) for the PCB; it cost $2 (+ shipping) for 5 boards.
 3. Assemble all parts on the PCB.
