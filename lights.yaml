@@ -35,7 +35,7 @@ mcp23017:
 
 switch:
     - platform: gpio
-      name: "Light #1 - Garage"
+      name: "Light #1"
       pin:
           mcp23017: mcp23017_hub
           number: 8
@@ -43,49 +43,49 @@ switch:
           mode: OUTPUT
           inverted: true
     - platform: gpio
-      name: "Light #2 - 3rd Bedroom"
+      name: "Light #2"
       pin:
           mcp23017: mcp23017_hub
           number: 9
           mode: OUTPUT
           inverted: true
     - platform: gpio
-      name: "Light #3 - Master Bedroom"
+      name: "Light #3"
       pin:
           mcp23017: mcp23017_hub
           number: 10
           mode: OUTPUT
           inverted: true
     - platform: gpio
-      name: "Light #4 - Master Bedroom Door"
+      name: "Light #4"
       pin:
           mcp23017: mcp23017_hub
           number: 11
           mode: OUTPUT
           inverted: true
     - platform: gpio
-      name: "Light #5 - Back Patio"
+      name: "Light #5"
       pin:
           mcp23017: mcp23017_hub
           number: 12
           mode: OUTPUT
           inverted: true
     - platform: gpio
-      name: "Light #6 - Kitchen"
+      name: "Light #6"
       pin:
           mcp23017: mcp23017_hub
           number: 13
           mode: OUTPUT
           inverted: true
     - platform: gpio
-      name: "Light #7 - Dining Room"
+      name: "Light #7"
       pin:
           mcp23017: mcp23017_hub
           number: 14
           mode: OUTPUT
           inverted: true
     - platform: gpio
-      name: "Light #8 - Living Room"
+      name: "Light #8"
       pin:
           mcp23017: mcp23017_hub
           number: 15
@@ -94,7 +94,7 @@ switch:
 
 binary_sensor:
     - platform: gpio
-      name: "PIR #1 - Garage"
+      name: "PIR #1"
       device_class: motion
       pin:
           mcp23017: mcp23017_hub
@@ -102,49 +102,49 @@ binary_sensor:
           number: 7
           #   mode: INPUT
     - platform: gpio
-      name: "PIR #2 - 3rd Bedroom"
+      name: "PIR #2"
       device_class: motion
       pin:
           mcp23017: mcp23017_hub
           number: 6
           #   mode: INPUT
     - platform: gpio
-      name: "PIR #3 - Master Bedroom"
+      name: "PIR #3"
       device_class: motion
       pin:
           mcp23017: mcp23017_hub
           number: 5
           #   mode: INPUT
     - platform: gpio
-      name: "PIR #4 - Master Bedroom Door"
+      name: "PIR #4"
       device_class: motion
       pin:
           mcp23017: mcp23017_hub
           number: 4
           #   mode: INPUT
     - platform: gpio
-      name: "PIR #5 - Back Patio"
+      name: "PIR #5"
       device_class: motion
       pin:
           mcp23017: mcp23017_hub
           number: 3
           #   mode: INPUT
     - platform: gpio
-      name: "PIR #6 - Kitchen"
+      name: "PIR #6"
       device_class: motion
       pin:
           mcp23017: mcp23017_hub
           number: 2
           #   mode: INPUT
     - platform: gpio
-      name: "PIR #7 - Dining Room"
+      name: "PIR #7"
       device_class: motion
       pin:
           mcp23017: mcp23017_hub
           number: 1
           #   mode: INPUT
     - platform: gpio
-      name: "PIR #8 - Living Room"
+      name: "PIR #8"
       device_class: motion
       pin:
           mcp23017: mcp23017_hub
