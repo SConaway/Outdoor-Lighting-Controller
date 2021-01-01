@@ -36,13 +36,12 @@ This is the hardware (PCB) and the software (ESPHome configuration) for a Home A
 -   1x SPDT on/off switch (**S1**)
 -   1x 10K ohm resistor (**R1**)
 -   _optional_: 1x LED (**D1**) and 1x 330 ohm resistor (**R2**)
--   1x 5K ohm resistor (I used a 5.2K ohm resistor I had lying around) soldered between CH_EN and VCC on the ESP-01
+-   1x 5K ohm resistor (I used a 5.2K ohm resistor I had lying around) (**R3**)
 -   1x safe casing that prevents access to 120VAC power
 -   1x server running Home Assistant for automating the lights in reaction to the motion sensors
 
 ## Notes
 
--   The ESP-01 needs a 5K ohm resistor (I used a 5.2K ohm resistor I had lying around) soldered between CH_EN and VCC on the ESP-01 to operate. This will be fixed in a later board revision.
 -   If ESPHome is not working properly (either not installing or not compiling), you can upload the binary in the Release using another uploading tool, such as `esptool`.
 -   I tested this with ESPHome v1.15.3.
 
