@@ -1,0 +1,155 @@
+esphome:
+    name: lights
+    platform: ESP8266
+    board: esp01
+    arduino_version: espressif8266@2.6.2
+
+wifi:
+    ssid: !secret wifi_name
+    password: !secret wifi_password
+
+    # Enable fallback hotspot (captive portal) in case wifi connection fails
+    ap:
+        ssid: "Lights Fallback Hotspot"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+time:
+    - platform: homeassistant
+      id: homeassistant_time
+
+i2c:
+    sda: 2
+    scl: 0
+    scan: True
+
+mcp23017:
+    - id: "mcp23017_hub"
+      # address: 0x20
+
+switch:
+    - platform: gpio
+      name: "Light #1 - Garage"
+      pin:
+          mcp23017: mcp23017_hub
+          number: 8
+          # Top Left
+          mode: OUTPUT
+          inverted: true
+    - platform: gpio
+      name: "Light #2 - 3rd Bedroom"
+      pin:
+          mcp23017: mcp23017_hub
+          number: 9
+          mode: OUTPUT
+          inverted: true
+    - platform: gpio
+      name: "Light #3 - Master Bedroom"
+      pin:
+          mcp23017: mcp23017_hub
+          number: 10
+          mode: OUTPUT
+          inverted: true
+    - platform: gpio
+      name: "Light #4 - Master Bedroom Door"
+      pin:
+          mcp23017: mcp23017_hub
+          number: 11
+          mode: OUTPUT
+          inverted: true
+    - platform: gpio
+      name: "Light #5 - Back Patio"
+      pin:
+          mcp23017: mcp23017_hub
+          number: 12
+          mode: OUTPUT
+          inverted: true
+    - platform: gpio
+      name: "Light #6 - Kitchen"
+      pin:
+          mcp23017: mcp23017_hub
+          number: 13
+          mode: OUTPUT
+          inverted: true
+    - platform: gpio
+      name: "Light #7 - Dining Room"
+      pin:
+          mcp23017: mcp23017_hub
+          number: 14
+          mode: OUTPUT
+          inverted: true
+    - platform: gpio
+      name: "Light #8 - Living Room"
+      pin:
+          mcp23017: mcp23017_hub
+          number: 15
+          mode: OUTPUT
+          inverted: true
+
+binary_sensor:
+    - platform: gpio
+      name: "PIR #1 - Garage"
+      device_class: motion
+      pin:
+          mcp23017: mcp23017_hub
+          # Top Right
+          number: 7
+          #   mode: INPUT
+    - platform: gpio
+      name: "PIR #2 - 3rd Bedroom"
+      device_class: motion
+      pin:
+          mcp23017: mcp23017_hub
+          number: 6
+          #   mode: INPUT
+    - platform: gpio
+      name: "PIR #3 - Master Bedroom"
+      device_class: motion
+      pin:
+          mcp23017: mcp23017_hub
+          number: 5
+          #   mode: INPUT
+    - platform: gpio
+      name: "PIR #4 - Master Bedroom Door"
+      device_class: motion
+      pin:
+          mcp23017: mcp23017_hub
+          number: 4
+          #   mode: INPUT
+    - platform: gpio
+      name: "PIR #5 - Back Patio"
+      device_class: motion
+      pin:
+          mcp23017: mcp23017_hub
+          number: 3
+          #   mode: INPUT
+    - platform: gpio
+      name: "PIR #6 - Kitchen"
+      device_class: motion
+      pin:
+          mcp23017: mcp23017_hub
+          number: 2
+          #   mode: INPUT
+    - platform: gpio
+      name: "PIR #7 - Dining Room"
+      device_class: motion
+      pin:
+          mcp23017: mcp23017_hub
+          number: 1
+          #   mode: INPUT
+    - platform: gpio
+      name: "PIR #8 - Living Room"
+      device_class: motion
+      pin:
+          mcp23017: mcp23017_hub
+          number: 0
+          #   mode: INPUT
+    # Reports if this device is Connected or not
+    - platform: status
+      name: Lights Status
