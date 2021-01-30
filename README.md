@@ -1,5 +1,7 @@
 # Outdoor-Lighting-Controller
 
+<img src="assets/render.png" />
+
 ## Description
 
 This is the hardware (PCB) and the software (ESPHome configuration) for a Home Assistant-based motion-lights controller. ESPHome is used to interface with Home Assistant, which is responsible for controlling the lights and motion alerts, etc.
@@ -47,7 +49,7 @@ This is the hardware (PCB) and the software (ESPHome configuration) for a Home A
 
 ## [Schematics](assets/Schematic.pdf)
 
-<img src="assets/Schematic.png" />
+<img src="assets/schematic.png" />
 
 ## Credits
 
